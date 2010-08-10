@@ -1,0 +1,22 @@
+Hobby Lobby Coupon Downloader
+Great for grandmas!
+
+To deploy on windows:
+
+1. Uncomment line 8 in main.cpp
+2. Compile on a windows machine
+3. Copy the following files to a new folder
+    - HobbyLobbyCoupon.exe
+    - QtCore4.dll
+    - QtGui4.dll
+    - QtNetwork4.dll
+    - libgcc_s_dw2-1.dll
+    - mingwm10.dll
+    - msvcrt.dll
+4. Create a folder called "plugins", and then another called
+   "imageformats" inside of that one. Copy qgif4.dll to that folder.
+    - Optionally, copy whatever other image format plugins you feel
+      like, just in case.
+5. It should run out of that folder. From here, you should be able to
+   make an installer using any off the shelf program.
+
