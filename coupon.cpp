@@ -1,11 +1,12 @@
 #include "coupon.h"
 
+Coupon::Coupon() {}
 Coupon::Coupon(const QUrl &url)
 {
     page = httpGet(url);
 }
 
-void Coupon::getCoupon()
+QByteArray Coupon::getCoupon()
 {
     QStringList sl = page.split("\n");
     QString line;
@@ -18,6 +19,7 @@ void Coupon::getCoupon()
     line.replace("<a href=\"", "http://hobbylobby.com");
     line.replace("\">", "");
     couponFile = httpGet(line);
+    return couponFile;
 }
 
 QByteArray Coupon::httpGet(QUrl url)
@@ -25,10 +27,36 @@ QByteArray Coupon::httpGet(QUrl url)
     QNetworkAccessManager nam(this);
     QNetworkRequest request;
     request.setUrl(url);
-    request.setRawHeader("User-Agent", "Mozilla/5.0");
+    request.setRawHeader("User-Agent", "Mozilla/5.0");  // I figure Hobby Lobby could get tired of visitors with null user agents.
     QNetworkReply *reply = nam.get(request);
     QEventLoop loop;
     connect(reply, SIGNAL(finished()), &loop, SLOT(quit()));
     loop.exec();
     return reply->readAll();
+}
+
+void Coupon::drawCouponPage(QGraphicsScene * scene, QPixmap img, int count)
+{
+    QGraphicsPixmapItem * pixmap;
+    int rows = (count + 1) / 2;
+    int ypad;   // this variable is to space out the rows.
+    for (int i = 1; i <= rows; i++) // starting at 1 because of the conditional that deals with and odd number of coupons being drawn
+    {
+        ypad = (i - 1) * 10;
+        if (i != rows || rows == count / 2) // this one
+        {
+            pixmap = scene->addPixmap(img);
+            pixmap->setPos(0, ((i - 1) * img.height() + ypad));
+            pixmap = scene->addPixmap(img);
+            pixmap->setPos(img.width() + 10, ((i - 1) * img.height() + ypad));
+        } else {
+            pixmap = scene->addPixmap(img);
+            pixmap->setPos(0, ((i - 1) * img.height() + ypad));
+        }
+    }
+}
+
+void Coupon::setUrl(const QUrl &url)
+{
+    page = httpGet(url);
 }

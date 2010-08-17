@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QDebug>
 #include <QEventLoop>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QNetworkReply>
@@ -13,9 +15,12 @@ class Coupon : public QObject
 {
     Q_OBJECT
 public:
-    explicit Coupon(const QUrl &url);
-    void getCoupon();
-    QByteArray couponFile;
+    Coupon();
+    Coupon(const QUrl &url);
+    QByteArray getCoupon(); // getCoupon() parses the coupon webpage and returns the image data it gets via httpGet
+    QByteArray couponFile;  // it also stores this data in couponFile
+    void drawCouponPage(QGraphicsScene * scene, QPixmap img, int count);
+    void setUrl(const QUrl &url);
 
 private:
     QString page;

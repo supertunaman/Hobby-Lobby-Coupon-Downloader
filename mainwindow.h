@@ -24,6 +24,7 @@ private:
     Ui::MainWindow *ui;
     QPixmap couponImg;
     QGraphicsScene scene;
+    Coupon coupon;
 
 private slots:
     void on_actionPrint_triggered();
