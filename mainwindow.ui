@@ -122,7 +122,7 @@ color: rgb(255, 85, 0);</string>
     <enum>LeftToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
    <addaction name="actionGetCoupon"/>
    <addaction name="actionPrint"/>
@@ -151,7 +151,7 @@ color: rgb(255, 85, 0);</string>
    </property>
    <property name="icon">
     <iconset resource="icons.qrc">
-     <normaloff>:/Icons/printer icon128.png</normaloff>:/Icons/printer icon128.png</iconset>
+     <normaloff>:/Icons/printer_icon128.png</normaloff>:/Icons/printer_icon128.png</iconset>
    </property>
    <property name="text">
     <string>Print</string>
@@ -163,7 +163,7 @@ color: rgb(255, 85, 0);</string>
   <action name="actionExit">
    <property name="icon">
     <iconset resource="icons.qrc">
-     <normaloff>:/Icons/slidingdoors icon128.png</normaloff>:/Icons/slidingdoors icon128.png</iconset>
+     <normaloff>:/Icons/slidingdoors_icon128.png</normaloff>:/Icons/slidingdoors_icon128.png</iconset>
    </property>
    <property name="text">
     <string>Exit</string>
