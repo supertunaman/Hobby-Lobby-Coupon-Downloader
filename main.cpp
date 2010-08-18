@@ -1,4 +1,5 @@
 #include <QtGui/QApplication>
+#include <QSettings>
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
@@ -6,6 +7,8 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     //qApp->addLibraryPath(qApp->applicationDirPath() + "\\plugins\\"); //uncomment for Windows deployment
+    QCoreApplication::setOrganizationName("Le Fauve");  // the beast
+    QCoreApplication::setApplicationName("Hobby Lobby Coupon Downloader");
     w.show();
 
     return a.exec();

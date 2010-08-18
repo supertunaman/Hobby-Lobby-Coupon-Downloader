@@ -19,7 +19,7 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="basicTab">
       <attribute name="title">
        <string>Basic</string>
       </attribute>
@@ -27,34 +27,34 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_9">
          <item>
-          <widget class="QGroupBox" name="groupBox">
+          <widget class="QGroupBox" name="toolbarGroup">
            <property name="title">
             <string>Toolbar position</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
-             <widget class="QRadioButton" name="radioButton">
+             <widget class="QRadioButton" name="topRad">
               <property name="text">
                <string>Top</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_2">
+             <widget class="QRadioButton" name="bottomRad">
               <property name="text">
                <string>Bottom</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_3">
+             <widget class="QRadioButton" name="leftRad">
               <property name="text">
                <string>Left</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QRadioButton" name="radioButton_4">
+             <widget class="QRadioButton" name="rightRad">
               <property name="text">
                <string>Right</string>
               </property>
@@ -64,13 +64,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QGroupBox" name="groupBox_2">
+          <widget class="QGroupBox" name="printingGroup">
            <property name="title">
             <string>Printing</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_3">
             <item>
-             <widget class="QCheckBox" name="checkBox_2">
+             <widget class="QCheckBox" name="grayscaleChck">
               <property name="text">
                <string>Grayscale</string>
               </property>
@@ -86,7 +86,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QSpinBox" name="spinBox">
+               <widget class="QSpinBox" name="paddingBox">
                 <property name="maximum">
                  <number>20</number>
                 </property>
@@ -102,7 +102,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QCheckBox" name="checkBox_3">
+             <widget class="QCheckBox" name="printDialogChck">
               <property name="text">
                <string>Show printing dialog</string>
               </property>
@@ -127,7 +127,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox">
+        <widget class="QCheckBox" name="updatesChck">
          <property name="text">
           <string>Check for updates on startup</string>
          </property>
@@ -135,7 +135,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab_2">
+     <widget class="QWidget" name="advancedTab">
       <attribute name="title">
        <string>Advanced</string>
       </attribute>
@@ -166,7 +166,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="couponPageUrl"/>
          </item>
         </layout>
        </item>
@@ -196,7 +196,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="discrimText"/>
          </item>
         </layout>
        </item>
@@ -226,7 +226,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="leftTrim"/>
          </item>
         </layout>
        </item>
@@ -256,7 +256,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="rightTrim"/>
          </item>
         </layout>
        </item>
@@ -286,7 +286,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="prefix"/>
          </item>
         </layout>
        </item>
@@ -316,7 +316,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="updateUrl"/>
          </item>
         </layout>
        </item>

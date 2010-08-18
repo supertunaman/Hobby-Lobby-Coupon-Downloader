@@ -6,6 +6,7 @@
 #include <QGraphicsPixmapItem>
 #include <QPrinter>
 #include <QPrintDialog>
+#include <QSettings>
 #include "coupon.h"
 
 namespace Ui {
