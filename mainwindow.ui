@@ -127,6 +127,7 @@ color: rgb(255, 85, 0);</string>
    <addaction name="actionGetCoupon"/>
    <addaction name="actionPrint"/>
    <addaction name="separator"/>
+   <addaction name="actionSettings"/>
    <addaction name="actionExit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -144,6 +145,9 @@ color: rgb(255, 85, 0);</string>
    <property name="toolTip">
     <string>Download the coupon from HobbyLobby.com</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
   </action>
   <action name="actionPrint">
    <property name="enabled">
@@ -159,6 +163,9 @@ color: rgb(255, 85, 0);</string>
    <property name="toolTip">
     <string>Print sheet of coupons</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
   </action>
   <action name="actionExit">
    <property name="icon">
@@ -170,6 +177,24 @@ color: rgb(255, 85, 0);</string>
    </property>
    <property name="toolTip">
     <string>Exit the program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/Icons/settings_icon128.png</normaloff>:/Icons/settings_icon128.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Various options and settings to configure the program</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
    </property>
   </action>
  </widget>

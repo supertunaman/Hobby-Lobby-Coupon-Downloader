@@ -4,5 +4,6 @@
         <file>coupon_icon.png</file>
         <file>printer_icon128.png</file>
         <file>slidingdoors_icon128.png</file>
+        <file>settings_icon128.png</file>
     </qresource>
 </RCC>

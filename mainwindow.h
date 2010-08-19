@@ -28,6 +28,7 @@ private:
     Coupon coupon;
 
 private slots:
+    void on_actionSettings_triggered();
     void on_actionPrint_triggered();
     void on_actionGetCoupon_triggered();
     void on_actionExit_triggered();

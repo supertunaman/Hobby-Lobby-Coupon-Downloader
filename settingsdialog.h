@@ -2,6 +2,8 @@
 #define SETTINGSDIALOG_H
 
 #include <QDialog>
+#include <QAbstractButton>
+#include <QDebug>
 #include <QSettings>
 
 namespace Ui {
@@ -19,6 +21,11 @@ public:
 private:
     Ui::SettingsDialog *ui;
     QSettings settings;
+    void applySettings();
+    void resetDefaults();
+
+private slots:
+    void on_buttonBox_clicked(QAbstractButton* button);
 };
 
 #endif // SETTINGSDIALOG_H

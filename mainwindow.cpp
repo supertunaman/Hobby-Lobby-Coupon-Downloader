@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "settingsdialog.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -58,4 +59,10 @@ void MainWindow::on_actionPrint_triggered()
     coupon.drawCouponPage(&printScene, img, ui->horizontalSlider->value());
     printScene.render(&painter);
     ui->statusBar->showMessage("Coupon page sent to printer.");
+}
+
+void MainWindow::on_actionSettings_triggered()
+{
+    SettingsDialog dialog(this);
+    dialog.exec();
 }
