@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->applyToolbarSettings();
     ui->graphicsView->setScene(&scene);
     scene.setSceneRect(0, 0, 620, 940); // I pulled these numbers from my ass, justsayin'
     connect(ui->horizontalSlider, SIGNAL(sliderMoved(int)), this, SLOT(drawCoupons(int)));
@@ -65,4 +66,19 @@ void MainWindow::on_actionSettings_triggered()
 {
     SettingsDialog dialog(this);
     dialog.exec();
+    this->applyToolbarSettings();
+}
+
+void MainWindow::applyToolbarSettings()
+{
+    QSettings settings;
+    QString tba = settings.value("toolbar/area").toString();
+    if (tba == "top")
+        this->addToolBar(Qt::TopToolBarArea, ui->mainToolBar);
+    else if (tba == "right")
+        this->addToolBar(Qt::RightToolBarArea, ui->mainToolBar);
+    else if (tba == "bottom")
+        this->addToolBar(Qt::BottomToolBarArea, ui->mainToolBar);
+    else
+        this->addToolBar(Qt::LeftToolBarArea, ui->mainToolBar);
 }

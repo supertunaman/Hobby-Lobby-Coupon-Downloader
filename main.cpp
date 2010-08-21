@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
     //qApp->addLibraryPath(qApp->applicationDirPath() + "\\plugins\\"); //uncomment for Windows deployment
     QCoreApplication::setOrganizationName("Le Fauve");  // the beast
     QCoreApplication::setApplicationName("Hobby Lobby Coupon Downloader");
+    QCoreApplication::setApplicationVersion("2.0dev");
     w.show();
 
     return a.exec();

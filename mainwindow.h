@@ -26,6 +26,7 @@ private:
     QPixmap couponImg;
     QGraphicsScene scene;
     Coupon coupon;
+    void applyToolbarSettings();
 
 private slots:
     void on_actionSettings_triggered();
