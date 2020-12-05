@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     scene.setSceneRect(0, 0, 620, 940); // I pulled these numbers from my ass, justsayin'
     connect(ui->horizontalSlider, SIGNAL(sliderMoved(int)), this, SLOT(drawCoupons(int)));
     ui->statusBar->showMessage(tr("Grabbing Coupon page..."));
-    coupon.setUrl(QUrl("http://hobbylobby.com/weekly/coupon.cfm"));
+    coupon.setUrl(QUrl("https://www.hobbylobby.com/find-savings/weekly-ad"));
     ui->statusBar->showMessage(tr("Click the Get Coupon icon to fetch this week's Hobby Lobby coupon."));
 }
 
@@ -57,6 +57,7 @@ void MainWindow::on_actionPrint_triggered()
     QPainter painter(&printer);
     printScene.setSceneRect(0, 0, 920, 1400);
     img.loadFromData(coupon.couponFile);
+    img = img.scaled(QSize(459,258));
     coupon.drawCouponPage(&printScene, img, ui->horizontalSlider->value());
     printScene.render(&painter);
     ui->statusBar->showMessage("Coupon page sent to printer.");

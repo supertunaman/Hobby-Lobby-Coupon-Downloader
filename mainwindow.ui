@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>752</width>
-    <height>454</height>
+    <width>812</width>
+    <height>491</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -58,7 +58,7 @@ color: rgb(255, 85, 0);</string>
         <property name="frameShadow">
          <enum>QFrame::Sunken</enum>
         </property>
-        <property name="numDigits">
+        <property name="digitCount">
          <number>2</number>
         </property>
         <property name="segmentStyle">
@@ -103,8 +103,8 @@ color: rgb(255, 85, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>752</width>
-     <height>23</height>
+     <width>812</width>
+     <height>30</height>
     </rect>
    </property>
   </widget>

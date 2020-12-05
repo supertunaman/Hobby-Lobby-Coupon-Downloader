@@ -12,12 +12,12 @@ QByteArray Coupon::getCoupon()
     QString line;
     foreach(line, sl)   // UGLY FUGLY MCLEPER CODE!
     {
-        if (line.contains("/assets/dynamic/_weekly.coupon/"))   // Whatever, it works for now.
+        if (line.contains("<p class=\"coupon-print\">"))   // Whatever, it works for now.
             break;
     }
     line = line.trimmed();
-    line.replace("<a href=\"", "http://hobbylobby.com");
-    line.replace("\">", "");
+    line.replace("<p class=\"coupon-print\"><a target=\"_blank\" href=\"", "https:");
+    line.replace("\">Print coupon to take in-store</a></p>", "");
     couponFile = httpGet(line);
     return couponFile;
 }
